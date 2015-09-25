@@ -23,7 +23,7 @@ function get_indienews_language() {
 	$locale = get_locale();
 	$locale = substr( $locale, 0, 2 );
 
-	$supported_languages = apply_filters( 'indienews_supported_languages', array( 'en', 'sv', 'de' ) );
+	$supported_languages = apply_filters( 'indienews_supported_languages', array( 'en', 'sv', 'de', 'fr' ) );
 
 	if ( in_array( $locale, $supported_languages ) ) {
 		return $locale;
