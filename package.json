@@ -1,13 +1,11 @@
 {
   "name": "indienews",
   "title": "IndieNews",
-  "description": "Awesome WordPress plugin",
-  "version": "1.0.0",
+  "description": "Push your IndieWeb articles to the IndieNews page.",
   "homepage": "https://github.com/pfefferle/wordpress-indienews",
   "author": {
     "name": "Matthias Pfefferle",
-    "email": "pfefferle@gmail.com",
-    "url": "http://notizblog.org/"
+    "url": "http://notiz.blog"
   },
   "repository": {
     "type": "git",
@@ -18,15 +16,12 @@
   },
   "licenses": [
     {
-      "type": "GPL-2.0",
-      "url": "https://github.com/pfefferle/wordpress-indienews/blob/master/LICENSE-GPL-2.0"
+      "type": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
     }
   ],
   "engines": {
     "node": ">= 0.10.0"
-  },
-  "scripts": {
-    "test": "grunt nodeunit"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

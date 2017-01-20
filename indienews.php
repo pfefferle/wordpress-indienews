@@ -6,8 +6,8 @@ Description: Push your IndieWeb articles to the IndieNews page
 Author: Matthias Pfefferle
 Author URI: http://notizblog.org/
 Version: 1.0.0
-License: GPL-2.0
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+License: MIT
+License URI: https://opensource.org/licenses/MIT
 Text Domain: indienews
 Domain Path: /languages
 */
@@ -103,8 +103,8 @@ class IndieNewsPlugin {
 	 *
 	 * @return array          Array of updated WebMention links.
 	 */
-	public static function send_webmentions( $links, $post_ID ) {
-		$tags = wp_get_post_tags( $post_ID );
+	public static function send_webmentions( $links, $post_id ) {
+		$tags = wp_get_post_tags( $post_id );
 
 		foreach ( $tags as $tag ) {
 			if ( preg_match( '/' . get_indienews_tag() . '/i', $tag->name ) ) {
