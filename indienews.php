@@ -1,16 +1,16 @@
 <?php
-/*
-Plugin Name: IndieNews
-Plugin URI: https://github.com/pfefferle/wordpress-indienews
-Description: Push your IndieWeb articles to the IndieNews page
-Author: Matthias Pfefferle
-Author URI: http://notizblog.org/
-Version: 1.0.0
-License: MIT
-License URI: https://opensource.org/licenses/MIT
-Text Domain: indienews
-Domain Path: /languages
-*/
+/**
+ * Plugin Name: IndieNews
+ * Plugin URI: https://github.com/pfefferle/wordpress-indienews
+ * Description: Push your IndieWeb articles to the IndieNews page
+ * Author: Matthias Pfefferle
+ * Author URI: http://notizblog.org/
+ * Version: 1.0.0
+ * License: MIT
+ * License URI: https://opensource.org/licenses/MIT
+ * Text Domain: indienews
+ * Domain Path: /languages
+ */
 
 add_action( 'init', array( 'IndieNewsPlugin', 'init' ) );
 
@@ -38,7 +38,7 @@ function get_indienews_language() {
  * @return string The correct URL.
  */
 function get_indienews_link() {
-	return 'http://news.indiewebcamp.com/' . get_indienews_language();
+	return 'https://news.indieweb.org/' . get_indienews_language();
 }
 
 /**
