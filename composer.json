@@ -1,12 +1,12 @@
 {
-  "name": "pfefferle/wordpress-indienews",
-  "description": "Push your IndieWeb articles to the IndieNews page.",
+  "name": "pfefferle/wordpress-indieweb-news",
+  "description": "Push your IndieWeb articles to the IndieWeb News page.",
   "type": "wordpress-plugin",
   "license": "MIT",
   "authors": [
     {
       "name": "Matthias Pfefferle",
-      "homepage": "http://notiz.blog"
+      "homepage": "https://notiz.blog/"
     }
   ],
   "require": {
@@ -14,6 +14,6 @@
     "composer/installers": "~1.0"
   },
   "extra": {
-    "installer-name": "indienews"
+    "installer-name": "indieweb-news"
   }
 }

@@ -1,12 +1,12 @@
-# IndieNews #
+# IndieWeb News #
 
 **Contributors:** Matthias Pfefferle  
-**Donate link:** http://notizblog.org/  
+**Donate link:** https://notiz.blog/  
 **Tags:** indieweb,indienews,indiewebcamp  
 **Tested up to:** 4.3  
 **Stable tag:** 4.3  
 
-Push your IndieWeb articles to the IndieNews page
+Push your IndieWeb articles to the IndieWeb News page
 
 ## Description ##
 
@@ -22,6 +22,6 @@ Push your IndieWeb articles to the IndieNews page
 
 ## Installation ##
 
-1. Upload the `indienews`-folder to the `/wp-content/plugins/` directory
+1. Upload the `indieweb-news`-folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the *Plugins* menu in WordPress
 3. ...and that's it :)

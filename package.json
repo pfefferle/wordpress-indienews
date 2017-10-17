@@ -1,18 +1,18 @@
 {
-  "name": "indienews",
-  "title": "IndieNews",
-  "description": "Push your IndieWeb articles to the IndieNews page.",
-  "homepage": "https://github.com/pfefferle/wordpress-indienews",
+  "name": "indieweb-news",
+  "title": "IndieWeb News",
+  "description": "Push your IndieWeb articles to the IndieWeb News page.",
+  "homepage": "https://github.com/pfefferle/wordpress-indieweb-news",
   "author": {
     "name": "Matthias Pfefferle",
-    "url": "http://notiz.blog"
+    "url": "https://notiz.blog/"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/pfefferle/wordpress-indienews"
+    "url": "git://github.com/pfefferle/wordpress-indieweb-news"
   },
   "bugs": {
-    "url": "https://github.com/pfefferle/wordpress-indienews/issues"
+    "url": "https://github.com/pfefferle/wordpress-indieweb-news/issues"
   },
   "licenses": [
     {
