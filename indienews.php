@@ -1,34 +1,34 @@
 <?php
 /**
  * Plugin Name: IndieWeb News
- * Plugin URI: https://github.com/pfefferle/wordpress-indieweb-news
+ * Plugin URI: https://github.com/pfefferle/wordpress-indienews
  * Description: Push your IndieWeb articles to the IndieWeb News page
  * Author: Matthias Pfefferle
  * Author URI: https://notiz.blog/
  * Version: 1.0.1
  * License: MIT
  * License URI: https://opensource.org/licenses/MIT
- * Text Domain: indieweb-news
+ * Text Domain: indienews
  * Domain Path: /languages
  */
 
-add_action( 'init', array( 'IndieWebNewsPlugin', 'init' ) );
+add_action( 'init', array( 'IndieNewsPlugin', 'init' ) );
 
 /**
  * Get the blogs language and check if it supported.
  *
  * @return string The blogs language with a default fallback.
  */
-function get_indiewebnews_language() {
+function get_indienews_language() {
 	$locale = get_locale();
 	$locale = substr( $locale, 0, 2 );
 
-	$supported_languages = apply_filters( 'indiewebnews_supported_languages', array( 'en', 'sv', 'de', 'fr' ) );
+	$supported_languages = apply_filters( 'indienews_supported_languages', array( 'en', 'sv', 'de', 'fr' ) );
 
 	if ( in_array( $locale, $supported_languages ) ) {
 		return $locale;
 	} else {
-		return apply_filters( 'indiewebnews_default_languages', 'en' );
+		return apply_filters( 'indienews_default_languages', 'en' );
 	}
 }
 
@@ -37,7 +37,7 @@ function get_indiewebnews_language() {
  *
  * @return string The correct URL.
  */
-function get_indiewebnews_link() {
+function get_indienews_link() {
 	return 'https://news.indieweb.org/' . get_indienews_language();
 }
 
@@ -47,18 +47,18 @@ function get_indiewebnews_link() {
  *
  * @return string The tag to filter by.
  */
-function get_indiewebnews_tag() {
-	$tag = apply_filters( 'indiewebnews_tag', 'indie' );
+function get_indienews_tag() {
+	$tag = apply_filters( 'indienews_tag', 'indie' );
 
 	return preg_quote( $tag );
 }
 
 /**
- * IndieWebNews class.
+ * IndieNews class.
  *
  * @author Matthias Pfefferle
  */
-class IndieWebNewsPlugin {
+class IndieNewsPlugin {
 
 	/**
 	 * Initialize the plugin.
@@ -71,8 +71,8 @@ class IndieWebNewsPlugin {
 			dirname( plugin_basename( __FILE__ ) ) . '/languages/' // path
 		);
 
-		add_filter( 'term_links-post_tag', array( 'IndieWebNewsPlugin', 'add_indiewebnews_tag_link' ) );
-		add_filter( 'webmention_links', array( 'IndieWebNewsPlugin', 'send_webmentions' ), 10, 2 );
+		add_filter( 'term_links-post_tag', array( 'IndieNewsPlugin', 'add_indienews_tag_link' ) );
+		add_filter( 'webmention_links', array( 'IndieNewsPlugin', 'send_webmentions' ), 10, 2 );
 	}
 
 	/**
@@ -82,7 +82,7 @@ class IndieWebNewsPlugin {
 	 *
 	 * @return array        updated list of links
 	 */
-	public static function add_indiewebnews_tag_link( $links ) {
+	public static function add_indienews_tag_link( $links ) {
 		// check if a post has an indie* tag
 		foreach ( $links as $link ) {
 			if ( preg_match( '/' . get_indienews_tag() . '/i', $link ) ) {
@@ -107,8 +107,8 @@ class IndieWebNewsPlugin {
 		$tags = wp_get_post_tags( $post_id );
 
 		foreach ( $tags as $tag ) {
-			if ( preg_match( '/' . get_indiewebnews_tag() . '/i', $tag->name ) ) {
-				$links[] = get_indiewebnews_link();
+			if ( preg_match( '/' . get_indienews_tag() . '/i', $tag->name ) ) {
+				$links[] = get_indienews_link();
 
 				return $links;
 			}

@@ -1,9 +1,9 @@
-# IndieWeb News #
+# IndieNews #
 
 **Contributors:** Matthias Pfefferle  
-**Donate link:** https://notiz.blog/  
-**Tags:** indieweb,indienews,indiewebcamp  
-**Tested up to:** 4.3  
+**Donate link:** https://notiz.blog/donate/  
+**Tags:** indieweb, indienews, indiewebcamp  
+**Tested up to:** 4.9.5  
 **Stable tag:** 4.3  
 
 Push your IndieWeb articles to the IndieWeb News page

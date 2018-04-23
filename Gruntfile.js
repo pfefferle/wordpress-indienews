@@ -11,8 +11,8 @@ module.exports = function(grunt) {
     makepot: {
       target: {
         options: {
-          mainFile: 'indieweb-news.php',
-          potFilename: 'indieweb-news.pot',
+          mainFile: 'indienews.php',
+          potFilename: 'indienews.pot',
           type: 'wp-plugin',
           updateTimestamp: true
         }
