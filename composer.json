@@ -1,5 +1,5 @@
 {
-  "name": "pfefferle/wordpress-indieweb-news",
+  "name": "pfefferle/wordpress-indienews",
   "description": "Push your IndieWeb articles to the IndieWeb News page.",
   "type": "wordpress-plugin",
   "license": "MIT",
@@ -14,6 +14,6 @@
     "composer/installers": "~1.0"
   },
   "extra": {
-    "installer-name": "indieweb-news"
+    "installer-name": "indienews"
   }
 }
