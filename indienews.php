@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: IndieWeb News
+ * Plugin Name: IndieNews
  * Plugin URI: https://github.com/pfefferle/wordpress-indienews
- * Description: Push your IndieWeb articles to the IndieWeb News page
+ * Description: Push your IndieWeb articles to the IndieNews page
  * Author: Matthias Pfefferle
  * Author URI: https://notiz.blog/
  * Version: 1.0.1
@@ -11,6 +11,8 @@
  * Text Domain: indienews
  * Domain Path: /languages
  */
+
+define( 'INDIENEWS_LANGUAGES', array( 'en', 'sv', 'de', 'fr', 'nl' ) );
 
 add_action( 'init', array( 'IndieNewsPlugin', 'init' ) );
 
@@ -23,7 +25,7 @@ function get_indienews_language() {
 	$locale = get_locale();
 	$locale = substr( $locale, 0, 2 );
 
-	$supported_languages = apply_filters( 'indienews_supported_languages', array( 'en', 'sv', 'de', 'fr' ) );
+	$supported_languages = apply_filters( 'indienews_supported_languages', INDIENEWS_LANGUAGES );
 
 	if ( in_array( $locale, $supported_languages ) ) {
 		return $locale;
@@ -42,7 +44,7 @@ function get_indienews_link() {
 }
 
 /**
- * Get the IndieWeb News tag that is used to check if the post
+ * Get the IndieNews tag that is used to check if the post
  * is about the IndieWeb or not. Default is "indie".
  *
  * @return string The tag to filter by.
@@ -71,12 +73,15 @@ class IndieNewsPlugin {
 			dirname( plugin_basename( __FILE__ ) ) . '/languages/' // path
 		);
 
+		require_once( dirname( __FILE__ ) . '/indienews-widget.php' );
+		add_action( 'wp_dashboard_setup', array( 'IndieNewsWidget', 'dashboard_widgets' ) );
+
 		add_filter( 'term_links-post_tag', array( 'IndieNewsPlugin', 'add_indienews_tag_link' ) );
 		add_filter( 'webmention_links', array( 'IndieNewsPlugin', 'send_webmentions' ), 10, 2 );
 	}
 
 	/**
-	 * Add the IndieWeb News category.
+	 * Add the IndieNews category.
 	 *
 	 * @param  array $links The rendered HTML links.
 	 *
@@ -96,7 +101,7 @@ class IndieNewsPlugin {
 	}
 
 	/**
-	 * Notify the IndieWeb News page.
+	 * Notify the IndieNews page.
 	 *
 	 * @param  array $links   The array of tags of one specific post.
 	 * @param  int   $post_ID The ID of the post.
