@@ -4,7 +4,7 @@
 **Donate link:** https://notiz.blog/donate/  
 **Tags:** indieweb, indienews, indiewebcamp  
 **Tested up to:** 4.9.5  
-**Stable tag:** 4.3  
+**Stable tag:** 1.1.0  
 
 Push your IndieWeb articles to the IndieWeb News page
 
@@ -15,6 +15,11 @@ Push your IndieWeb articles to the IndieWeb News page
 ## Frequently Asked Questions ##
 
 ## Changelog ##
+
+### 1.1.0 ###
+
+* renamed plugin from `indieweb-news` to `indienews`
+* added `IndieNews` and `This Week in the IndieWeb` dashboard feeds
 
 ### 1.0.0 ###
 
