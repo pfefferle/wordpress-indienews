@@ -10,7 +10,7 @@ Push your IndieWeb articles to the IndieWeb News page
 
 == Description ==
 
-[IndieNews](http://news.indiewebcamp.com) is a community-curated list of articles relevant to the [Indie Web](http://indiewebcamp.com/).
+[IndieNews](http://news.indieweb.org) is a community-curated list of articles relevant to the [Indie Web](http://indieweb.org/).
 
 == Frequently Asked Questions ==
 
