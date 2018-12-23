@@ -2,9 +2,9 @@
 # This file is distributed under the MIT.
 msgid ""
 msgstr ""
-"Project-Id-Version: IndieNews 1.1.0\n"
+"Project-Id-Version: IndieNews 1.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/indienews\n"
-"POT-Creation-Date: 2018-04-23 21:25:02+00:00\n"
+"POT-Creation-Date: 2018-12-23 21:07:40+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.5.4\n"
 
-#: indienews-widget.php:18
+#: includes/class-indienews-widget.php:18
 msgid "This Week in the IndieWeb"
 msgstr ""
 

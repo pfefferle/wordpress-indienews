@@ -1,10 +1,10 @@
 <?php
 /**
- * IndieNewsWidget class.
+ * Indienews_Widget class.
  *
  * @author Matthias Pfefferle
  */
-class IndieNewsWidget {
+class Indienews_Widget {
 	/**
 	 * Init dashboards widgets
 	 */
@@ -15,9 +15,9 @@ class IndieNewsWidget {
 			});
 		}
 
-		wp_add_dashboard_widget( "this_week_feed_{$lang}", __( 'This Week in the IndieWeb', 'indienews' ), array( 'IndieNewsWidget', 'this_week_feed' ) );
+		wp_add_dashboard_widget( "this_week_feed_{$lang}", __( 'This Week in the IndieWeb', 'indienews' ), array( 'Indienews_Widget', 'this_week_feed' ) );
 
-		add_filter( 'default_hidden_meta_boxes', array( 'IndieNewsWidget', 'default_hidden_meta_boxes' ), 99 );
+		add_filter( 'default_hidden_meta_boxes', array( 'Indienews_Widget', 'default_hidden_meta_boxes' ), 99 );
 	}
 
 	/**

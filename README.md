@@ -1,20 +1,29 @@
 # IndieNews #
 
-**Contributors:** Matthias Pfefferle  
+**Contributors:** pfefferle  
 **Donate link:** https://notiz.blog/donate/  
 **Tags:** indieweb, indienews, indiewebcamp  
-**Tested up to:** 4.9.5  
-**Stable tag:** 1.1.0  
+**Tested up to:** 5.0,2  
+**Stable tag:** 1.2.0  
 
-Push your IndieWeb articles to the IndieWeb News page
+Your blog-posts on IndieNews and IndieWeb.xyz
 
 ## Description ##
 
-[IndieNews](http://news.indiewebcamp.com) is a community-curated list of articles relevant to the [Indie Web](http://indiewebcamp.com/).
+Syndicates your (IndieWeb) blog-posts to the IndieWeb News page and to IndieWeb.xyz
+
+[IndieNews](http://news.indieweb.org) is a community-curated list of articles relevant to the [Indie Web](http://indieweb.org/).
+
+[IndieWeb.xyz](http://indieweb.xyz) is a syndication service—meaning you can notify us when you've posted on your blog and we'll link back to you. The whole thing is organized like Reddit into subs, which are topic-based (usually) collections of links.
 
 ## Frequently Asked Questions ##
 
 ## Changelog ##
+
+### 1.2.0 ###
+
+* added IndieWeb.xyz support
+* basic refactoring
 
 ### 1.1.0 ###
 
