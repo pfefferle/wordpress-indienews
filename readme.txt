@@ -3,7 +3,7 @@
 Contributors: pfefferle
 Donate link: https://notiz.blog/donate/
 Tags: indieweb, indienews, indiewebcamp
-Tested up to: 5.0,2
+Tested up to: 5.0.2
 Stable tag: 1.2.0
 
 Your blog-posts on IndieNews and IndieWeb.xyz
