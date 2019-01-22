@@ -41,7 +41,7 @@ function get_indienews_xyz_url( $post_id = null ) {
 
 	if ( $categories ) {
 		$category = current( $categories );
-		$category = $category->slug;
+		$category = $category['slug'];
 	} else {
 		$category = 'hottubs';
 	}
