@@ -37,11 +37,11 @@ function get_indienews_xyz_url( $post_id = null ) {
 		$post_id = $post->ID;
 	}
 
-	$categories = wp_get_post_categories( $post_id );
+	$categories = wp_get_post_categories( $post_id, array( 'fields' => 'all' ) );
 
 	if ( $categories ) {
 		$category = current( $categories );
-		$category = $category['slug'];
+		$category = $category->slug;
 	} else {
 		$category = 'hottubs';
 	}
