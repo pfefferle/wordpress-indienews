@@ -14,6 +14,8 @@ class Indienews {
 	 * @return array        updated list of links
 	 */
 	public static function add_indienews_tag_link( $links ) {
+		$links[] = get_indieweb_xyz_link();
+
 		// check if a post has an indie* tag
 		foreach ( $links as $link ) {
 			if ( preg_match( '/' . get_indienews_tag() . '/i', $link ) ) {
@@ -22,8 +24,6 @@ class Indienews {
 				return $links;
 			}
 		}
-
-		$links[] = get_indieweb_xyz_link();
 
 		return $links;
 	}
@@ -38,6 +38,8 @@ class Indienews {
 	 */
 	public static function send_webmentions( $links, $post_id ) {
 		$tags = wp_get_post_tags( $post_id );
+
+		$links[] = get_indienews_xyz_url();
 
 		foreach ( $tags as $tag ) {
 			if ( preg_match( '/' . get_indienews_tag() . '/i', $tag->name ) ) {

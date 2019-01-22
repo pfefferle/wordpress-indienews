@@ -27,11 +27,11 @@ function get_indienews_url() {
 }
 
 /**
- * Get the link to the correct IndieWeb.xyz page.
+ * Get the link to the correct IndieNews.xyz page.
  *
  * @return string The correct URL.
  */
-function get_indieweb_xyz_link() {
+function get_indienews_xyz_url() {
 	$categories = get_categories();
 
 	if ( $categories ) {
@@ -41,7 +41,16 @@ function get_indieweb_xyz_link() {
 		$category = 'hottubs';
 	}
 
-	return '<a href="https://indieweb.xyz/' . get_indienews_language( INDIEWEB_XYZ_LANGUAGES ) . '/' . $category . '" rel="tag" class="u-category u-tag u-syndication">/xyz/' . $category . '</a>';
+	return 'https://indieweb.xyz/' . get_indienews_language( INDIEWEB_XYZ_LANGUAGES ) . '/' . $category;
+}
+
+/**
+ * Get the link to the correct IndieWeb.xyz page.
+ *
+ * @return string The correct URL.
+ */
+function get_indieweb_xyz_link() {
+	return '<a href="' . get_indienews_xyz_url() . '" rel="tag" class="u-category u-tag u-syndication">' . wp_parse_url( get_indienews_xyz_url(), PHP_URL_PATH ) . '</a>';
 }
 
 /**
