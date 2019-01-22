@@ -31,8 +31,13 @@ function get_indienews_url() {
  *
  * @return string The correct URL.
  */
-function get_indienews_xyz_url() {
-	$categories = wp_get_post_categories();
+function get_indienews_xyz_url( $post_id = null ) {
+	if ( ! $post_id ) {
+		$post = get_post();
+		$post_id = $post->ID;
+	}
+
+	$categories = wp_get_post_categories( $post_id );
 
 	if ( $categories ) {
 		$category = current( $categories );
