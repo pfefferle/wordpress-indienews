@@ -5,7 +5,7 @@
  * Description: Push your IndieWeb articles to the IndieNews page
  * Author: Matthias Pfefferle
  * Author URI: https://notiz.blog/
- * Version: 1.2.1
+ * Version: 1.2.2
  * License: MIT
  * License URI: https://opensource.org/licenses/MIT
  * Text Domain: indienews

@@ -14,16 +14,16 @@ class Indienews {
 	 * @return array        updated list of links
 	 */
 	public static function add_indienews_tag_link( $links ) {
-		$links[] = get_indieweb_xyz_link();
-
 		// check if a post has an indie* tag
 		foreach ( $links as $link ) {
 			if ( preg_match( '/' . get_indienews_tag() . '/i', $link ) ) {
 				$links[] = '<a href="' . get_indienews_url() . '" rel="tag" class="u-category u-tag">#indienews</a>';
 
-				return $links;
+				break;
 			}
 		}
+
+		$links[] = get_indieweb_xyz_link();
 
 		return $links;
 	}

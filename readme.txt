@@ -4,7 +4,7 @@ Contributors: pfefferle
 Donate link: https://notiz.blog/donate/
 Tags: indieweb, indienews, indiewebcamp
 Tested up to: 5.0.3
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 
 Your blog-posts on IndieNews and IndieWeb.xyz
 
@@ -19,6 +19,10 @@ Syndicates your (IndieWeb) blog-posts to the IndieWeb News page and to IndieWeb.
 == Frequently Asked Questions ==
 
 == Changelog ==
+
+= 1.2.2 =
+
+* fixed tag-generation
 
 = 1.2.1 =
 
