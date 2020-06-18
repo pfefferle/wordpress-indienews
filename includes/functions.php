@@ -10,7 +10,7 @@ function get_indienews_language( $supported_languages = INDIENEWS_LANGUAGES ) {
 
 	$supported_languages = apply_filters( 'indienews_supported_languages', $supported_languages );
 
-	if ( in_array( $locale, $supported_languages ) ) {
+	if ( in_array( $locale, $supported_languages, true ) ) {
 		return $locale;
 	} else {
 		return apply_filters( 'indienews_default_languages', 'en' );
@@ -33,7 +33,7 @@ function get_indienews_url() {
  */
 function get_indienews_xyz_url( $post_id = null ) {
 	if ( ! $post_id ) {
-		$post = get_post();
+		$post    = get_post();
 		$post_id = $post->ID;
 	}
 

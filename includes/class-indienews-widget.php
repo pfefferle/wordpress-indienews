@@ -10,9 +10,13 @@ class Indienews_Widget {
 	 */
 	public static function dashboard_widgets() {
 		foreach ( INDIENEWS_LANGUAGES as $lang ) {
-			wp_add_dashboard_widget( "indienews_feed_{$lang}", 'IndieNews ' . strtoupper( $lang ), function() use( $lang ) {
-				self::indienews_feed( $lang );
-			});
+			wp_add_dashboard_widget(
+				"indienews_feed_{$lang}",
+				'IndieNews (' . strtoupper( $lang ) . ')',
+				function () use ( $lang ) {
+					self::indienews_feed( $lang );
+				}
+			);
 		}
 
 		wp_add_dashboard_widget( "this_week_feed_{$lang}", __( 'This Week in the IndieWeb', 'indienews' ), array( 'Indienews_Widget', 'this_week_feed' ) );
@@ -25,13 +29,15 @@ class Indienews_Widget {
 	 */
 	public static function indienews_feed( $lang = 'en' ) {
 		echo '<div class="rss-widget">';
-		@wp_widget_rss_output(array(
-			'url' => 'https://granary.io/url?input=html&output=atom&url=https%3A//news.indieweb.org/' . $lang,
-			'items' => 10,
-			'show_summary' => 1,
-			'show_author' => 0,
-			'show_date' => 1
-		));
+		@wp_widget_rss_output(
+			array(
+				'url'          => 'https://granary.io/url?input=html&output=atom&url=https%3A//news.indieweb.org/' . $lang,
+				'items'        => 10,
+				'show_summary' => 1,
+				'show_author'  => 0,
+				'show_date'    => 1,
+			)
+		);
 		echo '</div>';
 	}
 
@@ -40,13 +46,15 @@ class Indienews_Widget {
 	 */
 	public static function this_week_feed() {
 		echo '<div class="rss-widget">';
-		wp_widget_rss_output(array(
-			'url' => 'https://indieweb.org/this-week/feed.xml',
-			'items' => 10,
-			'show_summary' => 1,
-			'show_author' => 0,
-			'show_date' => 1
-		));
+		wp_widget_rss_output(
+			array(
+				'url'          => 'https://indieweb.org/this-week/feed.xml',
+				'items'        => 10,
+				'show_summary' => 1,
+				'show_author'  => 0,
+				'show_date'    => 1,
+			)
+		);
 		echo '</div>';
 	}
 
@@ -57,7 +65,7 @@ class Indienews_Widget {
 		$language = get_indienews_language();
 
 		foreach ( INDIENEWS_LANGUAGES as $supported_language ) {
-			if ( ! in_array( $supported_language, array( $language, 'en' ) ) ) {
+			if ( ! in_array( $supported_language, array( $language, 'en' ), true ) ) {
 				$list[] = "indienews_feed_{$supported_language}";
 			}
 		}
