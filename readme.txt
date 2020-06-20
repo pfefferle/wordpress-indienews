@@ -44,6 +44,6 @@ Syndicates your (IndieWeb) blog-posts to the IndieWeb News page and to IndieWeb.
 
 == Installation ==
 
-1. Upload the `indieweb-news`-folder to the `/wp-content/plugins/` directory
+1. Upload the `indienews`-folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the *Plugins* menu in WordPress
 3. ...and that's it :)
