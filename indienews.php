@@ -10,6 +10,7 @@
  * License URI: https://opensource.org/licenses/MIT
  * Text Domain: indienews
  * Domain Path: /languages
+ * Update URI: https://github.com/pfefferle/wordpress-indienews
  */
 
 define( 'INDIENEWS_LANGUAGES', array( 'en', 'sv', 'de', 'fr', 'nl' ) );
