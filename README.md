@@ -1,6 +1,6 @@
 # IndieNews #
 
-**Contributors:** pfefferle  
+**Contributors:** [pfefferle](https://profiles.wordpress.org/pfefferle)  
 **Donate link:** https://notiz.blog/donate/  
 **Tags:** indieweb, indienews, indiewebcamp  
 **Tested up to:** 5.0.3  
