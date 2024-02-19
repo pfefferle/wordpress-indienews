@@ -1,24 +1,26 @@
 # IndieNews #
 
-**Contributors:** [pfefferle](https://profiles.wordpress.org/pfefferle)  
+**Contributors:** [pfefferle](https://profiles.wordpress.org/pfefferle/)  
 **Donate link:** https://notiz.blog/donate/  
 **Tags:** indieweb, indienews, indiewebcamp  
-**Tested up to:** 5.0.3  
-**Stable tag:** 1.2.2  
+**Tested up to:** 6.4  
+**Stable tag:** 1.2.3  
 
-Your blog-posts on IndieNews and IndieWeb.xyz
+Your blog-posts on IndieNews
 
 ## Description ##
 
-Syndicates your (IndieWeb) blog-posts to the IndieWeb News page and to IndieWeb.xyz
+Syndicates your (IndieWeb) blog-posts to the IndieWeb News page
 
 [IndieNews](http://news.indieweb.org) is a community-curated list of articles relevant to the [Indie Web](http://indieweb.org/).
-
-[IndieWeb.xyz](http://indieweb.xyz) is a syndication service—meaning you can notify us when you've posted on your blog and we'll link back to you. The whole thing is organized like Reddit into subs, which are topic-based (usually) collections of links.
 
 ## Frequently Asked Questions ##
 
 ## Changelog ##
+
+### 1.2.3 ###
+
+* remove IndieWeb.xyz because it is no longer available
 
 ### 1.2.2 ###
 

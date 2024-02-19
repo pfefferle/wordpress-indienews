@@ -15,5 +15,10 @@
   },
   "extra": {
     "installer-name": "indienews"
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true
+    }
   }
 }

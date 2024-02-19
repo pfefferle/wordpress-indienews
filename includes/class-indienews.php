@@ -23,8 +23,6 @@ class Indienews {
 			}
 		}
 
-		$links[] = get_indieweb_xyz_link();
-
 		return $links;
 	}
 
@@ -38,8 +36,6 @@ class Indienews {
 	 */
 	public static function send_webmentions( $links, $post_id ) {
 		$tags = wp_get_post_tags( $post_id );
-
-		$links[] = get_indienews_xyz_url( $post_id );
 
 		foreach ( $tags as $tag ) {
 			if ( preg_match( '/' . get_indienews_tag() . '/i', $tag->name ) ) {
