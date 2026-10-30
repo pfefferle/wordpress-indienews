@@ -17,7 +17,7 @@ class Indienews {
 		// check if a post has an indie* tag
 		foreach ( $links as $link ) {
 			if ( preg_match( '/' . get_indienews_tag() . '/i', $link ) ) {
-				$links[] = '<a href="' . get_indienews_url() . '" rel="tag" class="u-category u-tag">#indienews</a>';
+				$links[] = '<a href="' . get_indienews_url() . '" rel="tag" class="u-category u-tag">IndieNews</a>';
 
 				break;
 			}
@@ -46,5 +46,21 @@ class Indienews {
 		}
 
 		return $links;
+	}
+
+	/**
+	 * Add the IndieNews category to the mf2/jf2 feed entry.
+	 *
+	 * XRay (used by IndieNews) prefers the `rel=alternate` mf2 JSON over the HTML.
+	 *
+	 * @param  array $entry   The jf2 entry.
+	 * @param  int   $post_id The ID of the post.
+	 *
+	 * @return array          The updated jf2 entry.
+	 */
+	public static function add_indienews_category( $entry, $post_id ) {
+		$entry['category'] = self::send_webmentions( isset( $entry['category'] ) ? $entry['category'] : array(), $post_id );
+
+		return $entry;
 	}
 }

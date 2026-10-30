@@ -34,5 +34,6 @@ function indienews_init() {
 	require_once( dirname( __FILE__ ) . '/includes/class-indienews.php' );
 	add_filter( 'term_links-post_tag', array( 'Indienews', 'add_indienews_tag_link' ) );
 	add_filter( 'webmention_links', array( 'Indienews', 'send_webmentions' ), 10, 2 );
+	add_filter( 'jf2_entry_array', array( 'Indienews', 'add_indienews_category' ), 10, 2 );
 }
 add_action( 'init', 'indienews_init' );
